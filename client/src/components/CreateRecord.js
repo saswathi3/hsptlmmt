@@ -25,7 +25,7 @@ const CreateRecord = (props) => {
     e.preventDefault();
 
     axios
-      .post('https://5000-saswathi3-hsptlmmt-twadt97bl06.ws-us93.gitpod.io/api/hsptlmmt', hsptlmmt)
+      .post(`https://5000-saswathi3-hsptlmmt-twadt97bl06.ws-us93.gitpod.io/api/hsptlmmt`, hsptlmmt)
       .then((res) => {
         setHsptl({
           name: '',
@@ -52,8 +52,11 @@ const CreateRecord = (props) => {
         <div className='row'>
           <div className='col-md-8 m-auto'>
             <br />
-            <Link to='/' className='btn btn-outline-warning float-left'>
+            <Link to='/show-list' className='btn btn-outline-warning float-left'>
               Show Record List
+            </Link>
+            <Link to='/' className='btn btn-outline-warning float-right'>
+              Home
             </Link>
           </div>
           <div className='col-md-8 m-auto'>
@@ -110,9 +113,9 @@ const CreateRecord = (props) => {
                 <input
                   type='text'
                   placeholder='Mention the disease'
-                  name='disease'
+                  name='diseases'
                   className='form-control'
-                  value={hsptlmmt.disease}
+                  value={hsptlmmt.diseases}
                   onChange={onChange}
                 />
               </div>

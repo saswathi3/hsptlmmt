@@ -10,18 +10,18 @@ const RecordCard = (props) => {
   return (
     <div className='card-container'>
       <img
-        src='https://images.unsplash.com/photo-1495446815901-a7297e633e8d'
+        src='https://assets.indiabizforsale.com/business/upload_pic/web_system_7bb0874dc8fe0e5f8985ceb5c8ae556f.jpg'
         alt='Records'
         height={200}
       />
-      <div className='desc'>
+      <div className='desc bg-dark'>
         <h2>
           <Link to={ `/show-record/${hsptlmmt._id}` }>
             {hsptlmmt.name}  
           </Link> 
         </h2>
-        <h3>{hsptlmmt.age}</h3>
-        <p>{hsptlmmt.disease}</p>
+        <h3>{hsptlmmt.diseases}</h3>
+        <p>{hsptlmmt.doctor}</p>
       </div>
     </div>  
   )

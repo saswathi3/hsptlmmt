@@ -25,7 +25,7 @@ function UpdateRecordInfo(props) {
           age: res.data.age,
           address: res.data.address,
           phone: res.data.phone,
-          diseases: res.data.disease,
+          diseases: res.data.diseases,
           doctor: res.data.doctor,
         });
       })
@@ -47,7 +47,7 @@ function UpdateRecordInfo(props) {
       age: hsptlmmt.age,
       address: hsptlmmt.address,
       phone: hsptlmmt.phone,
-      diseases: hsptlmmt.disease,
+      diseases: hsptlmmt.diseases,
       doctor: hsptlmmt.doctor,
     };
 
@@ -133,11 +133,11 @@ function UpdateRecordInfo(props) {
             <br />
 
             <div className='form-group'>
-              <label htmlFor='disease'>Disease</label>
+              <label htmlFor='diseases'>Disease</label>
               <input
                 type='text'
                 placeholder='Disease'
-                name='disease'
+                name='diseases'
                 className='form-control'
                 value={hsptlmmt.diseases}
                 onChange={onChange}

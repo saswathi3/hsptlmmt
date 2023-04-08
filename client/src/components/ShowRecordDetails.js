@@ -33,7 +33,7 @@ function ShowRecordDetails(props) {
 
   const RecordItem = (
     <div>
-      <table className='table table-hover table-dark'>
+      <table className='table table-hover table-dark bg-dark'>
         <tbody>
           <tr>
             <th scope='row'>1</th>
@@ -86,10 +86,13 @@ function ShowRecordDetails(props) {
             <hr /> <br />
           </div>
           <div className='col-md-10 m-auto'>{RecordItem}</div>
-          <div className='col-md-6 m-auto'>
+
+          {/* BUTTONS */}
+          {/* DELETE BUTTON */}
+          <div className='col-md-4 m-auto'>
             <button
               type='button'
-              className='btn btn-outline-danger btn-lg btn-block'
+              className='btn btn-outline-danger btn-block'
               onClick={() => {
                 onDeleteClick(hsptlmmt._id);
               }}
@@ -97,12 +100,14 @@ function ShowRecordDetails(props) {
               Delete Record
             </button>
           </div>
-          <div className='col-md-6 m-auto'>
+
+          {/* EDIT BUTTON */}
+          <div className='col-md-4 m-auto'>
             <Link
               to={`/edit-record/${hsptlmmt._id}`}
               className='btn btn-outline-info btn-lg btn-block'
             >
-              Edit Record
+              Edit Book
             </Link>
           </div>
         </div>
