@@ -5,7 +5,7 @@ import CreateRecord from './components/CreateRecord';
 import UpdateRecordInfo from './components/UpdateRecordInfo';
 import ShowRecordDetails from './components/ShowRecordDetails';
 import ShowRecordList from './components/ShowRecordList';
-// import Home from './components/Home';
+import Home from './components/Home';
 
 
 function App() {
@@ -13,8 +13,8 @@ function App() {
     <Router>
       <div>
         <Routes>
-        {/* <Route exact path='/' element={<Home/>} /> */}
-        <Route exact path='/' element={<ShowRecordList/>} />
+        <Route exact path='/' element={<Home/>} />
+        <Route path='/show-allrecords' element={<ShowRecordList/>} />
         <Route path='/create-record' element={ <CreateRecord/>} />
         <Route path='/edit-record/:id' element={ <UpdateRecordInfo />} />
         <Route path='/show-record/:id' element={ <ShowRecordDetails /> } />
